@@ -36,8 +36,8 @@ function createMap(earthquake){
       });
 
     let map = L.map("map",{
-        center: [37.09, -95.71],
-        zoom: 5,
+        center: [40.09, -5.71],
+        zoom: 3,
         layers: [street, earthquake]
     });
     let legend = L.control({position: 'bottomright'});
@@ -46,9 +46,10 @@ function createMap(earthquake){
         let limits = [0,20,50,100];
         let colors = ['green','yellow','orange','red'];
         let labels = [];
-        let legendInfo = "<div class = \"labels\">" +
+        let legendInfo = "<h1>Depth</h1>" +
+                         "<div class = \"labels\">" +
                          "<div class = \"min\">" + limits[0] + "</div>" +
-                         "<div class = \"max\">" + limits[limits.length-1] + "</div>"+
+                         "<div class = \"max\">" + limits[limits.length-1] + "</div>" +
                          "</div>";
         div.innerHTML = legendInfo;
         limits.forEach(function(limit,index){
